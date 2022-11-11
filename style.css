@@ -9,6 +9,9 @@ body{
     background: #000000;
     color: white;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 .hero-img{
     width:600px;
@@ -29,6 +32,23 @@ body{
 
 .hero-name{
     color: rgb(158, 104, 18);
+    /* background: linear-gradient(to right ,rgb(67,124,205),rgb(69,214,202));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    animation: fade 2s ease-in-out infinite;
+}
+
+@keyframes fade{
+    0%{
+        color: green;
+    }
+    50%{
+      color: orange;
+    }
+    100%{
+        color: blue;
+    }
+    
 }
 .hero-greet{
     color: rgb(158, 104, 18);
@@ -44,7 +64,7 @@ body{
 }
 
 .hero-btn:hover{
-    background:rgb(158, 104, 18) ;
+    background:rgb(158, 104, 18);
 }
 
 .about-info{
@@ -53,10 +73,24 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 .aboutDetails{
-    padding: 10rem 0rem 0rem 3rem;
+    padding: 10rem 0rem 2rem 3rem;
+    
 }
 .aboutDetails h5{
     padding: 5px;
     font-family: 'Roboto', sans-serif;
-    text-align: start;
 }
+
+@media screen and (max-width : 768px) {
+    .aboutDetails{
+        padding: 5rem 0rem 2rem 5rem; 
+    }
+    .dounBtn{
+       margin-left: 30px;
+    }
+    .hero-img{
+        width: 400px;
+        height: 400px;
+    }
+}
+
